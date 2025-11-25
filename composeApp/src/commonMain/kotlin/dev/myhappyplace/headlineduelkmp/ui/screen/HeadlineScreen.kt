@@ -36,6 +36,7 @@ import dev.myhappyplace.headlineduelkmp.ui.components.AnswerState
 import dev.myhappyplace.headlineduelkmp.ui.components.ErrorState
 import dev.myhappyplace.headlineduelkmp.ui.components.LoadingState
 import dev.myhappyplace.headlineduelkmp.ui.components.QuestionState
+import dev.myhappyplace.headlineduelkmp.ui.theme.ssp
 import dev.myhappyplace.headlineduelkmp.ui.viewmodel.HeadlineError
 import dev.myhappyplace.headlineduelkmp.ui.viewmodel.HeadlineUiState
 import dev.myhappyplace.headlineduelkmp.ui.viewmodel.HeadlineViewModel
@@ -87,7 +88,7 @@ fun HeadlineScreenContent(
                     Text(
                         stringResource(Res.string.app_name),
                         color = MaterialTheme.colorScheme.onPrimary,
-                        style = MaterialTheme.typography.titleLarge.copy(fontSize = 30.sp),
+                        style = MaterialTheme.typography.displaySmall,
                         modifier = Modifier.fillMaxWidth(),
                         textAlign = TextAlign.Center
                     )
@@ -115,7 +116,7 @@ fun HeadlineScreenContent(
             Text(
                 text = stringResource(Res.string.headline_prompt),
                 style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 18.sp,
+                    fontSize = 18.ssp,
                 ),
                 textAlign = TextAlign.Left,
                 modifier = Modifier.padding(all = 16.dp)
@@ -129,7 +130,7 @@ fun HeadlineScreenContent(
             ) {
                 Text(
                     text = state.headline,
-                    style = MaterialTheme.typography.headlineSmall.copy(fontSize = 22.sp),
+                    style = MaterialTheme.typography.titleLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.padding(16.dp),
                     color = MaterialTheme.colorScheme.onSecondary

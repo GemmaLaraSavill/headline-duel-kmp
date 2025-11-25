@@ -27,6 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import dev.myhappyplace.headlineduelkmp.ui.theme.ssp
 import headlineduelkmp.composeapp.generated.resources.Res
 import headlineduelkmp.composeapp.generated.resources.*
 
@@ -40,7 +41,7 @@ fun InformationScreen(onBack: () -> Unit) {
                     Text(
                         stringResource(Res.string.app_name),
                         color = MaterialTheme.colorScheme.onPrimary,
-                        style = MaterialTheme.typography.titleLarge.copy(fontSize = 30.sp),
+                        style = MaterialTheme.typography.displaySmall,
                         modifier = Modifier
                             .fillMaxWidth()
                             .padding(end = 68.dp),
@@ -78,7 +79,7 @@ fun InformationScreen(onBack: () -> Unit) {
             Text(
                 text = stringResource(Res.string.information_body),
                 style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 18.sp
+                    fontSize = 18.ssp
                 ),
                 color = MaterialTheme.colorScheme.onSurface
             )

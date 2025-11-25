@@ -42,6 +42,7 @@ import dev.myhappyplace.headlineduelkmp.ui.theme.WrongAnswerBackgroundDark
 import dev.myhappyplace.headlineduelkmp.ui.theme.WrongAnswerBackgroundLight
 import dev.myhappyplace.headlineduelkmp.ui.theme.WrongAnswerTextDark
 import dev.myhappyplace.headlineduelkmp.ui.theme.WrongAnswerTextLight
+import dev.myhappyplace.headlineduelkmp.ui.theme.ssp
 import headlineduelkmp.composeapp.generated.resources.Res
 import headlineduelkmp.composeapp.generated.resources.business
 import headlineduelkmp.composeapp.generated.resources.correct_answer_user
@@ -82,7 +83,7 @@ fun QuestionState(categories: List<StringResource>, onAnswer: (String) -> Unit) 
                     modifier = Modifier.padding(8.dp)
                 )
                 Spacer(modifier = Modifier.height(4.dp))
-                Text(stringResource(res), fontSize = 22.sp)
+                Text(stringResource(res), fontSize = 22.ssp)
             }
         }
     }
@@ -189,7 +190,7 @@ fun AnswerState(
                 .fillMaxWidth()
                 .padding(vertical = 4.dp)
         ) {
-            Text(stringResource(Res.string.next), fontSize = 22.sp)
+            Text(stringResource(Res.string.next), fontSize = 22.ssp)
             Spacer(modifier = Modifier.height(4.dp))
             Icon(imageVector = Icons.AutoMirrored.Filled.ArrowForward, contentDescription = null)
         }
