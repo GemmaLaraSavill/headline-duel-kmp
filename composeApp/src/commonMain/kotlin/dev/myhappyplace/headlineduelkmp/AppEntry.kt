@@ -1,10 +1,6 @@
 package dev.myhappyplace.headlineduelkmp
 
 import androidx.compose.runtime.Composable
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
-@Preview
-fun App() {
-    AppEntry()
-}
+expect fun AppEntry()

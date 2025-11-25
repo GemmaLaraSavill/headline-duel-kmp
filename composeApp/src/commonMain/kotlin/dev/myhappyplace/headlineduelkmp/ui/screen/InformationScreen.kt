@@ -1,0 +1,93 @@
+package dev.myhappyplace.headlineduelkmp.ui.screen
+
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
+import androidx.compose.material3.TopAppBarDefaults
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import org.jetbrains.compose.resources.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
+import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import headlineduelkmp.composeapp.generated.resources.Res
+import headlineduelkmp.composeapp.generated.resources.*
+
+@OptIn(ExperimentalMaterial3Api::class)
+@Composable
+fun InformationScreen(onBack: () -> Unit) {
+    Scaffold(
+        topBar = {
+            TopAppBar(
+                title = {
+                    Text(
+                        stringResource(Res.string.app_name),
+                        color = MaterialTheme.colorScheme.onPrimary,
+                        style = MaterialTheme.typography.titleLarge.copy(fontSize = 30.sp),
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(end = 68.dp),
+                        textAlign = TextAlign.Center
+                    )
+                },
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.primary),
+                navigationIcon = {
+                    IconButton(onClick = onBack) {
+                        Icon(
+                            imageVector = Icons.AutoMirrored.Filled.ArrowBack,
+                            contentDescription = stringResource(Res.string.back),
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
+                    }
+                }
+            )
+        }
+    ) { paddingValues ->
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(paddingValues)
+                .padding(32.dp)
+                .background(MaterialTheme.colorScheme.background)
+                .verticalScroll(rememberScrollState())
+        ) {
+            Text(
+                text = stringResource(Res.string.information_title),
+                style = MaterialTheme.typography.headlineSmall,
+                fontWeight = FontWeight.Bold,
+                color = MaterialTheme.colorScheme.onSurface
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = stringResource(Res.string.information_body),
+                style = MaterialTheme.typography.bodyLarge.copy(
+                    fontSize = 18.sp
+                ),
+                color = MaterialTheme.colorScheme.onSurface
+            )
+        }
+    }
+}
+
+@Preview
+@Composable
+private fun InformationScreenPreview() {
+    InformationScreen(onBack = {})
+}
