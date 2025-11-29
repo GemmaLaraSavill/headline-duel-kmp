@@ -1,6 +1,6 @@
 # 📰 Headline Duel KMP
 
-**Headline Duel KMP** is a Kotlin Multiplatform (KMP) reimagining of the original Android app. It brings the same interactive AI experience—connecting a fine-tuned **DistilBERT news classifier** with a mobile UI—to both **Android and iOS** using a single shared codebase.
+**Headline Duel KMP** is a Kotlin Multiplatform (KMP) version of the original Android app. It brings the same interactive AI experience—connecting my fine-tuned **DistilBERT news classifier** with a mobile UI—to both **Android and iOS** using a single shared codebase.
 
 This project serves as a showcase of **modern mobile development** (Kotlin Multiplatform, Compose Multiplatform) alongside **applied Generative AI** (LLM fine-tuning, Hugging Face integration).
 
@@ -10,7 +10,7 @@ This project serves as a showcase of **modern mobile development** (Kotlin Multi
 
 | Android Demo                                                                                                                                                   | iOS Demo                                                                                                                                                                      |
 |:---------------------------------------------------------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| [<img src="demo/android/Screenshot_20250831_121347.png" alt="Android Demo Thumbnail" height="700" width="auto"/>](demo/android/headline-duel-android-demo.mp4) | [<img src="demo/iOS/Captura%20de%20pantalla%202025-11-25%20a%20las%2016.43.57.png" alt="iOS Demo Thumbnail" height="700" width="auto"/>](demo/iOS/headline-duel-ios-demo.mp4) |
+| [<img src="demo/android/Screenshot_20251129_103219.png" alt="Android Demo Thumbnail" height="700" width="auto"/>](demo/android/headline-duel-android-demo.mp4) | [<img src="demo/iOS/Captura de pantalla 2025-11-25 a las 16.44.23.png" alt="iOS Demo Thumbnail" height="700" width="auto"/>](demo/iOS/headline-duel-ios-demo.mp4) |
 
 
 ## ✨ Features
